@@ -32,17 +32,11 @@ const Hero = () => {
               </p>
               <a
                 href="/"
-                aria-label=""
-                className="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700"
+                className="inline-flex items-center justify-center h-12 px-6 mt-2 font-medium tracking-wide text-white transition duration-200 bg-red-600 rounded-full hover:bg-opacity-90 focus:shadow-outline focus:outline-none"
+                aria-label="Sign up"
+                title="Sign up"
               >
-                Learn more
-                <svg
-                  className="inline-block w-3 ml-2"
-                  fill="currentColor"
-                  viewBox="0 0 12 12"
-                >
-                  <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
-                </svg>
+                Contact us
               </a>
             </div>
             <div className="w-full max-w-xl xl:px-8 xl:w-5/12">
