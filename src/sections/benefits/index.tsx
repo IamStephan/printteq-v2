@@ -16,9 +16,9 @@ const Benefits = () => {
         <div className="flex flex-col justify-center">
           <div className="flex">
             <div className="mr-4">
-              <div className="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-indigo-50">
+              <div className="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-red-50">
                 <svg
-                  className="w-8 h-8 text-deep-purple-accent-400"
+                  className="w-8 h-8 text-red-600"
                   stroke="currentColor"
                   viewBox="0 0 52 52"
                 >
@@ -46,9 +46,9 @@ const Benefits = () => {
           </div>
           <div className="flex">
             <div className="mr-4">
-              <div className="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-indigo-50">
+              <div className="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-red-50">
                 <svg
-                  className="w-8 h-8 text-deep-purple-accent-400"
+                  className="w-8 h-8 text-red-600"
                   stroke="currentColor"
                   viewBox="0 0 52 52"
                 >
@@ -76,9 +76,9 @@ const Benefits = () => {
           </div>
           <div className="flex">
             <div className="mr-4">
-              <div className="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-indigo-50">
+              <div className="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-red-50">
                 <svg
-                  className="w-8 h-8 text-deep-purple-accent-400"
+                  className="w-8 h-8 text-red-600"
                   stroke="currentColor"
                   viewBox="0 0 52 52"
                 >

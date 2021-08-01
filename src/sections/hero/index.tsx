@@ -62,7 +62,7 @@ const Hero = () => {
                       placeholder="John"
                       required
                       type="text"
-                      className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-md shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                      className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-md shadow-sm appearance-none focus:border-red-600 focus:outline-none focus:shadow-outline"
                       id="firstName"
                       name="firstName"
                     />
@@ -78,7 +78,7 @@ const Hero = () => {
                       placeholder="Doe"
                       required
                       type="text"
-                      className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-md shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                      className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-md shadow-sm appearance-none focus:border-red-600 focus:outline-none focus:shadow-outline"
                       id="lastName"
                       name="lastName"
                     />
@@ -94,7 +94,7 @@ const Hero = () => {
                       placeholder="john.doe@example.org"
                       required
                       type="text"
-                      className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-md shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                      className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-md shadow-sm appearance-none focus:border-red-600 focus:outline-none focus:shadow-outline"
                       id="email"
                       name="email"
                     />
@@ -102,7 +102,7 @@ const Hero = () => {
                   <div className="mt-4 mb-2 sm:mb-4">
                     <button
                       type="submit"
-                      className="inline-flex items-center justify-center w-full h-12 px-6 font-semibold tracking-wide text-white transition duration-200 rounded-full bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                      className="inline-flex items-center justify-center w-full h-12 px-6 font-semibold tracking-wide text-white transition duration-200 bg-red-600 rounded-full hover:bg-opacity-90 focus:shadow-outline focus:outline-none"
                     >
                       Subscribe
                     </button>

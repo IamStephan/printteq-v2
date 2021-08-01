@@ -18,7 +18,7 @@ const MobilePopover: React.FC<MobilePopoverProps> = ({ closeMenu }) => {
               className="inline-flex items-center"
             >
               <svg
-                className="w-8 text-deep-purple-accent-400"
+                className="w-8 text-red-600"
                 viewBox="0 0 24 24"
                 strokeLinejoin="round"
                 strokeWidth="2"
@@ -60,7 +60,7 @@ const MobilePopover: React.FC<MobilePopoverProps> = ({ closeMenu }) => {
                 href="/"
                 aria-label="Our product"
                 title="Our product"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-red-600"
               >
                 Product
               </a>
@@ -70,7 +70,7 @@ const MobilePopover: React.FC<MobilePopoverProps> = ({ closeMenu }) => {
                 href="/"
                 aria-label="Our product"
                 title="Our product"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-red-600"
               >
                 Features
               </a>
@@ -80,7 +80,7 @@ const MobilePopover: React.FC<MobilePopoverProps> = ({ closeMenu }) => {
                 href="/"
                 aria-label="Product pricing"
                 title="Product pricing"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-red-600"
               >
                 Pricing
               </a>
@@ -90,7 +90,7 @@ const MobilePopover: React.FC<MobilePopoverProps> = ({ closeMenu }) => {
                 href="/"
                 aria-label="Sign in"
                 title="Sign in"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-red-600"
               >
                 Sign in
               </a>
@@ -98,7 +98,7 @@ const MobilePopover: React.FC<MobilePopoverProps> = ({ closeMenu }) => {
             <li>
               <a
                 href="/"
-                className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-red-600 rounded shadow-md hover:bg-opacity-90 focus:shadow-outline focus:outline-none"
                 aria-label="Sign up"
                 title="Sign up"
               >
@@ -132,7 +132,7 @@ const Navbar: React.FC = () => {
               href="/"
               aria-label="Our product"
               title="Our product"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-red-600"
             >
               Product
             </a>
@@ -142,7 +142,7 @@ const Navbar: React.FC = () => {
               href="/"
               aria-label="Our product"
               title="Our product"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-red-600"
             >
               Features
             </a>
@@ -152,7 +152,7 @@ const Navbar: React.FC = () => {
               href="/"
               aria-label="Product pricing"
               title="Product pricing"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-red-600"
             >
               Pricing
             </a>
@@ -165,7 +165,7 @@ const Navbar: React.FC = () => {
           className="inline-flex items-center lg:mx-auto"
         >
           <svg
-            className="w-8 text-deep-purple-accent-400"
+            className="w-8 text-red-600"
             viewBox="0 0 24 24"
             strokeLinejoin="round"
             strokeWidth="2"
@@ -189,7 +189,7 @@ const Navbar: React.FC = () => {
               href="/"
               aria-label="Sign in"
               title="Sign in"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-red-600"
             >
               Sign in
             </a>
@@ -197,7 +197,7 @@ const Navbar: React.FC = () => {
           <li>
             <a
               href="/"
-              className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded-full shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+              className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-red-600 rounded-full shadow-md hover:bg-opacity-90 focus:shadow-outline focus:outline-none"
               aria-label="Sign up"
               title="Sign up"
             >
@@ -209,7 +209,7 @@ const Navbar: React.FC = () => {
           <button
             aria-label="Open Menu"
             title="Open Menu"
-            className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50"
+            className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-gray-50 focus:bg-gray-50"
             onClick={_openMenu}
           >
             <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
