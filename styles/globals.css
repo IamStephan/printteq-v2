@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Override the base form styles */
+@layer base {
+  [type="text"]:focus,
+  [type="email"]:focus,
+  [type="url"]:focus,
+  [type="password"]:focus,
+  [type="number"]:focus,
+  [type="date"]:focus,
+  [type="datetime-local"]:focus,
+  [type="month"]:focus,
+  [type="search"]:focus,
+  [type="tel"]:focus,
+  [type="time"]:focus,
+  [type="week"]:focus,
+  [multiple]:focus,
+  textarea:focus,
+  select:focus {
+    --tw-ring-color: theme("colors.red.600");
+    /* border-color: var(--tw-ring-color); */
+  }
+
+  /* [type="checkbox"],
+  [type="radio"] {
+      color: #3b82f6;
+  }
+
+  [type="checkbox"]:focus,
+  [type="radio"]:focus {
+      --tw-ring-color: #93c5fd;
+  }
+
+  button:focus,
+  a:focus {
+      box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+      border-color: #93c5fd;
+      outline: none;
+  } */
+}
