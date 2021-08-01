@@ -90,7 +90,7 @@ const Services = () => {
           {ServicesList.map((service) => (
             <div
               key={service.title}
-              className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
+              className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded-md shadow-xl group hover:shadow-2xl"
             >
               <div className="p-5">
                 <div className="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-red-50">
