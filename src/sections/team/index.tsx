@@ -14,9 +14,9 @@ const Team = () => {
       </div>
       <div className="grid gap-10 mx-auto lg:grid-cols-2 lg:max-w-screen-lg">
         <div className="grid sm:grid-cols-3">
-          <div className="relative w-full h-48 max-h-full rounded shadow sm:h-auto">
+          <div className="relative w-full h-48 max-h-full overflow-hidden rounded-md sm:h-auto">
             <img
-              className="absolute object-cover w-full h-full rounded"
+              className="absolute object-cover w-full h-full"
               src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
               alt="Person"
             />
@@ -48,9 +48,9 @@ const Team = () => {
           </div>
         </div>
         <div className="grid sm:grid-cols-3">
-          <div className="relative w-full h-48 max-h-full rounded shadow sm:h-auto">
+          <div className="relative w-full h-48 max-h-full overflow-hidden rounded-md sm:h-auto">
             <img
-              className="absolute object-cover w-full h-full rounded"
+              className="absolute object-cover w-full h-full"
               src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
               alt="Person"
             />
@@ -82,9 +82,9 @@ const Team = () => {
           </div>
         </div>
         <div className="grid sm:grid-cols-3">
-          <div className="relative w-full h-48 max-h-full rounded shadow sm:h-auto">
+          <div className="relative w-full h-48 max-h-full overflow-hidden rounded-md sm:h-auto">
             <img
-              className="absolute object-cover w-full h-full rounded"
+              className="absolute object-cover w-full h-full"
               src="https://images.pexels.com/photos/3747435/pexels-photo-3747435.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
               alt="Person"
             />
@@ -117,9 +117,9 @@ const Team = () => {
           </div>
         </div>
         <div className="grid sm:grid-cols-3">
-          <div className="relative w-full h-48 max-h-full rounded shadow sm:h-auto">
+          <div className="relative w-full h-48 max-h-full overflow-hidden rounded-md sm:h-auto">
             <img
-              className="absolute object-cover w-full h-full rounded"
+              className="absolute object-cover w-full h-full"
               src="https://images.pexels.com/photos/3931603/pexels-photo-3931603.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
               alt="Person"
             />
