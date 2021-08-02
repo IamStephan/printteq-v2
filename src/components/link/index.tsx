@@ -12,12 +12,13 @@ interface Props {
   to: string
 }
 
-const Link: React.FC<Props> = ({
+const Link: React.FC<Props & React.HTMLProps<HTMLAnchorElement>> = ({
   children,
   className,
   activeClassName,
   activePath,
   to,
+  ...rest
 }) => {
   const { asPath } = useRouter()
   const pathToMatch = activePath || to
@@ -28,6 +29,7 @@ const Link: React.FC<Props> = ({
         className={clsx(className, {
           [activeClassName || ""]: matchPath(pathToMatch, asPath),
         })}
+        {...rest}
       >
         {children}
       </a>
