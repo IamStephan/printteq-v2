@@ -1,14 +1,20 @@
 import React from "react"
+import Image from "next/image"
+
+import BackgroundImg from "@assets/sections/hero/background.jpg"
 
 const Hero = () => {
   return (
     <section className="relative">
-      <img
-        src="https://images.pexels.com/photos/3228766/pexels-photo-3228766.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+      <Image
+        src={BackgroundImg}
+        placeholder="blur"
+        layout="fill"
+        // objectPosition="bottom"
         className="absolute inset-0 object-cover w-full h-full"
         alt=""
       />
-      <div className="relative bg-gray-900 bg-opacity-90">
+      <div className="relative bg-gray-900 bg-opacity-80">
         <svg
           className="absolute inset-x-0 text-white -bottom-1"
           viewBox="0 0 1160 163"
