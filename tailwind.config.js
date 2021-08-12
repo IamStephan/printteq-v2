@@ -311,16 +311,15 @@ module.exports = {
       scale: {
         30: ".3",
       },
-      boxShadow: {
-        outline: "0 0 0 3px rgba(229, 56, 53, 0.4)",
-      },
     },
   },
   variants: {
     extend: {},
   },
   plugins: [
+    require("@tailwindcss/typography"),
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/forms"),
+    require("@tailwindcss/line-clamp"),
   ],
 }
