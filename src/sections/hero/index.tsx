@@ -1,118 +1,73 @@
 import React from "react"
 import Image from "next/image"
 
-import BackgroundImg from "@assets/sections/hero/background.jpg"
+import BackgroundImg from "@assets/sections/hero/background_01.jpg"
+
+import MiniLogoDark from "@assets/illustrations/logo_mini_dark.svg"
 
 const Hero = () => {
   return (
-    <section className="relative">
-      <Image
-        src={BackgroundImg}
-        placeholder="blur"
-        layout="fill"
-        // objectPosition="bottom"
-        className="absolute inset-0 object-cover w-full h-full"
-        alt=""
-      />
-      <div className="relative bg-gray-900 bg-opacity-80">
+    <section className="relative flex flex-col-reverse pb-16 pt-[calc(77px+64px)] lg:pt-[88px] lg:flex-col lg:pb-0">
+      <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
         <svg
-          className="absolute inset-x-0 text-white -bottom-1"
-          viewBox="0 0 1160 163"
+          viewBox="0 0 365 894"
+          fill="none"
+          preserveAspectRatio="none slice"
+          className="absolute left-0 z-10 hidden h-full text-white transform lg:block"
         >
           <path
+            d="M199.889 508.341C199.652 411.524 199.413 313.997 167.857 222.32C138.07 135.867 82.5417 57.422 -4.57764e-05 3.05176e-05L0 894H365C189 872.5 205.934 714.406 201.468 609.199C200.054 575.852 199.971 542.14 199.889 508.341Z"
             fill="currentColor"
-            d="M-164 13L-104 39.7C-44 66 76 120 196 141C316 162 436 152 556 119.7C676 88 796 34 916 13C1036 -8 1156 2 1216 7.7L1276 13V162.5H1216C1156 162.5 1036 162.5 916 162.5C796 162.5 676 162.5 556 162.5C436 162.5 316 162.5 196 162.5C76 162.5 -44 162.5 -104 162.5H-164V13Z"
           />
         </svg>
-        <div className="relative px-4 py-16 mx-auto overflow-hidden sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-          <div className="flex flex-col items-center justify-between xl:flex-row">
-            <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
-              <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-5xl sm:leading-none">
-                The quick, brown fox <br className="hidden md:block" />
-                jumps over a lazy dog
-              </h2>
-              <p className="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudan, totam rem aperiam, eaque ipsa
-                quae.
-              </p>
-              <a
-                href="/"
-                className="inline-flex items-center justify-center h-12 px-6 mt-2 font-medium tracking-wide text-white transition duration-200 bg-red-600 rounded-full hover:bg-opacity-90 focus:shadow-outline focus:outline-none"
-                aria-label="Sign up"
-                title="Sign up"
-              >
-                Contact us
-              </a>
-            </div>
-            <div className="w-full max-w-xl xl:px-8 xl:w-5/12">
-              <div className="bg-white rounded-md shadow-2xl ring-1 ring-gray-900 ring-opacity-10 p-7 sm:p-10">
-                <h3 className="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl">
-                  Sign up for updates
-                </h3>
-                <form>
-                  <div className="mb-1 sm:mb-2">
-                    <label
-                      htmlFor="firstName"
-                      className="inline-block mb-1 font-medium"
-                    >
-                      First name
-                    </label>
-                    <input
-                      placeholder="John"
-                      required
-                      type="text"
-                      className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-md shadow-sm appearance-none focus:border-red-600 focus:outline-none focus:shadow-outline"
-                      id="firstName"
-                      name="firstName"
-                    />
-                  </div>
-                  <div className="mb-1 sm:mb-2">
-                    <label
-                      htmlFor="lastName"
-                      className="inline-block mb-1 font-medium"
-                    >
-                      Last name
-                    </label>
-                    <input
-                      placeholder="Doe"
-                      required
-                      type="text"
-                      className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-md shadow-sm appearance-none focus:border-red-600 focus:outline-none focus:shadow-outline"
-                      id="lastName"
-                      name="lastName"
-                    />
-                  </div>
-                  <div className="mb-1 sm:mb-2">
-                    <label
-                      htmlFor="email"
-                      className="inline-block mb-1 font-medium"
-                    >
-                      E-mail
-                    </label>
-                    <input
-                      placeholder="john.doe@example.org"
-                      required
-                      type="text"
-                      className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-md shadow-sm appearance-none focus:border-red-600 focus:outline-none focus:shadow-outline"
-                      id="email"
-                      name="email"
-                    />
-                  </div>
-                  <div className="mt-4 mb-2 sm:mb-4">
-                    <button
-                      type="submit"
-                      className="inline-flex items-center justify-center w-full h-12 px-6 font-semibold tracking-wide text-white transition duration-200 bg-red-600 rounded-full hover:bg-opacity-90 focus:shadow-outline focus:outline-none"
-                    >
-                      Subscribe
-                    </button>
-                  </div>
-                  <p className="text-xs text-gray-600 sm:text-sm">
-                    We respect your privacy. Unsubscribe at any time.
-                  </p>
-                </form>
-              </div>
-            </div>
+
+        <Image
+          src={BackgroundImg}
+          placeholder="blur"
+          layout="fill"
+          objectPosition="bottom"
+          className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
+          alt=""
+        />
+
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-80 backdrop-filter backdrop-blur-sm" />
+
+        <div className="absolute inset-0 items-center justify-center hidden lg:flex">
+          <MiniLogoDark className="w-auto h-40 ml-24 text-red-600" />
+        </div>
+      </div>
+      <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
+        <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
+          <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-red-600 uppercase rounded-full bg-red-50 ring-1 ring-red-600">
+            Brand new
+          </p>
+          <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-white lg:text-gray-900 sm:text-5xl sm:leading-none">
+            Digital Printing &
+            <br className="hidden md:block" />
+            Engraving{" "}
+            <span className="inline-block text-red-600 lg:text-red-600">
+              Solutions.
+            </span>
+          </h2>
+          <p className="pr-5 mb-5 text-base text-white lg:text-gray-700 md:text-lg">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae. explicabo.
+          </p>
+          <div className="flex items-center">
+            <a
+              href="/"
+              className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 bg-red-600 rounded-full hover:bg-opacity-90 focus:shadow-outline focus:outline-none"
+            >
+              Contact Us
+            </a>
+            <a
+              href="/"
+              aria-label=""
+              className="inline-flex items-center font-semibold text-white transition-colors duration-200 lg:text-gray-800 hover:text-red-600"
+            >
+              Services
+            </a>
           </div>
         </div>
       </div>

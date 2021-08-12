@@ -35,8 +35,8 @@ const CTA = () => {
             </div>
           </div>
         </div>
-        <div className="px-5 pt-6 pb-5 text-center border border-gray-300 rounded lg:w-2/5">
-          <div className="mb-5 font-semibold">Create an account</div>
+        <div className="relative px-5 pt-6 pb-5 overflow-hidden rounded-md ring-1 ring-gray-900 ring-opacity-10 lg:w-2/5">
+          {/* <div className="mb-5 font-semibold">Create an account</div>
           <div className="flex justify-center w-full mb-3">
             <a
               href="/"
@@ -70,7 +70,13 @@ const CTA = () => {
             className="inline-flex items-center justify-center w-full h-12 px-6 font-semibold transition duration-200 bg-white border border-gray-300 rounded md:w-auto hover:bg-gray-100 focus:shadow-outline focus:outline-none"
           >
             Sign Up with Email
-          </a>
+          </a> */}
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d511.4800429783817!2d18.035896942276203!3d-33.08645162219131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c34aa1d8f53734d%3A0x61b534c3ae1b039f!2sGERIMED%20MOBILITY%20LANGEBAAN!5e0!3m2!1sen!2sza!4v1628536985121!5m2!1sen!2sza"
+            className="absolute inset-0 w-full h-full border-none"
+            loading="lazy"
+          ></iframe>
         </div>
       </div>
     </section>
