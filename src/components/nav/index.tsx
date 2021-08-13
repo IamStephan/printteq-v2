@@ -11,7 +11,7 @@ import LogoMiniDark from "@assets/illustrations/logo_mini_dark.svg"
 const Links = [
   {
     title: "Benefits",
-    url: "",
+    url: "#benefits",
   },
   {
     title: "Services",
@@ -28,9 +28,9 @@ const Links = [
 ]
 
 const Navbar: React.FC = () => {
-  const { asPath } = useRouter()
+  const { route } = useRouter()
 
-  const isHome = asPath === "/"
+  const isHome = route === "/"
 
   return (
     <nav
@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
               PRiNTTEQ
             </span>
           </Link>
-          <ul className="items-center hidden space-x-8 lg:flex">
+          <ul className="items-center hidden space-x-6 lg:flex">
             {Links.map((item, i) => (
               <li key={i}>
                 <Link
@@ -73,9 +73,10 @@ const Navbar: React.FC = () => {
                   aria-label={item.title}
                   title={item.title}
                   className={clsx(
-                    "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-red-600",
+                    "font-medium tracking-wide transition-colors duration-200",
                     {
-                      "text-white hover:text-red-50": isHome,
+                      "text-white hover:text-red-200": isHome,
+                      "text-gray-700 hover:text-red-600": !isHome,
                     }
                   )}
                 >
