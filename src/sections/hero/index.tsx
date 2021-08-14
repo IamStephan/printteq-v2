@@ -37,8 +37,7 @@ const Hero = () => {
             Brand new
           </p>
           <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-white lg:text-gray-900 sm:text-5xl sm:leading-none">
-            Digital Printing &
-            <br className="hidden md:block" />
+            Digital Printing & <br className="hidden md:block" />
             Engraving{" "}
             <span className="inline-block text-red-600 lg:text-red-600">
               Solutions.
