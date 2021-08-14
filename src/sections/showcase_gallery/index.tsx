@@ -10,7 +10,10 @@ import Showcase06 from "@assets/sections/gallery/showcase_06.jpg"
 
 const Gallery = () => {
   return (
-    <section className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <section
+      id="gallery-showcase"
+      className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+    >
       <div className="flex flex-col w-full mb-6 lg:justify-between lg:flex-row md:mb-8">
         <div className="flex items-center mb-5 md:mb-6 group lg:max-w-xl">
           <a href="/" aria-label="Item" className="mr-3">
