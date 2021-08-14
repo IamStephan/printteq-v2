@@ -25,7 +25,7 @@ const Footer = () => {
           <a
             href="https://facebook.com/PRINTTEQ"
             target="_blank"
-            rel="nofollow"
+            rel="noreferrer"
             className="text-gray-500 transition-colors duration-300 hover:text-red-600"
           >
             <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
