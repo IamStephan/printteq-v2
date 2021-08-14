@@ -11,19 +11,19 @@ import LogoMiniDark from "@assets/illustrations/logo_mini_dark.svg"
 const Links = [
   {
     title: "Benefits",
-    url: "#benefits",
+    url: "/#benefits",
   },
   {
     title: "Services",
-    url: "",
+    url: "/#services",
   },
   {
     title: "Team",
-    url: "",
+    url: "/#team",
   },
   {
     title: "Showcase",
-    url: "",
+    url: "/#gallery-showcase",
   },
 ]
 
@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
             ))}
             <li>
               <Link
-                to="/"
+                to="/#contact-us"
                 className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-red-600 rounded-full hover:bg-opacity-90 focus:shadow-outline focus:outline-none"
                 aria-label="Contact Us"
                 title="Contact Us"
@@ -170,25 +170,29 @@ const Navbar: React.FC = () => {
                       <ul className="space-y-4">
                         {Links.map((item, i) => (
                           <li key={i}>
-                            <Link
-                              to={item.url}
-                              aria-label={item.title}
-                              title={item.title}
-                              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-red-600"
-                            >
-                              {item.title}
-                            </Link>
+                            <Popover.Button as={Fragment}>
+                              <Link
+                                to={item.url}
+                                aria-label={item.title}
+                                title={item.title}
+                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-red-600"
+                              >
+                                {item.title}
+                              </Link>
+                            </Popover.Button>
                           </li>
                         ))}
                         <li>
-                          <Link
-                            to="/"
-                            className="inline-flex items-center justify-center w-full h-12 px-6 mt-2 font-medium tracking-wide text-white transition duration-200 bg-red-600 rounded-full hover:bg-opacity-90 focus:shadow-outline focus:outline-none"
-                            aria-label="Contact Us"
-                            title="Contact Us"
-                          >
-                            Contact Us
-                          </Link>
+                          <Popover.Button as={Fragment}>
+                            <Link
+                              to="/#contact-us"
+                              className="inline-flex items-center justify-center w-full h-12 px-6 mt-2 font-medium tracking-wide text-white transition duration-200 bg-red-600 rounded-full hover:bg-opacity-90 focus:shadow-outline focus:outline-none"
+                              aria-label="Contact Us"
+                              title="Contact Us"
+                            >
+                              Contact Us
+                            </Link>
+                          </Popover.Button>
                         </li>
                       </ul>
                     </nav>
