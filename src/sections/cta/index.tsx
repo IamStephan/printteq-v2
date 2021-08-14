@@ -2,7 +2,10 @@ import React from "react"
 
 const CTA = () => {
   return (
-    <section className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <section
+      id="contact-us"
+      className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+    >
       <div className="flex flex-col justify-between lg:flex-row">
         <div className="mb-12 lg:max-w-lg lg:pr-5 lg:mb-0">
           <div className="max-w-xl mb-6">
