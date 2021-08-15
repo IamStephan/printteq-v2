@@ -44,8 +44,8 @@ const Hero = () => {
             </span>
           </h2>
           <p className="pr-5 mb-5 text-base text-white lg:text-gray-700 md:text-lg">
-            Solving all your digital printing and engraving needs in one shop
-            with expert technicians.
+            Solving all your digital printing, singage and engraving needs in
+            one shop with expert technicians.
           </p>
           <div className="flex items-center">
             <a
