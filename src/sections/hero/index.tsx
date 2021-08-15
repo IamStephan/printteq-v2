@@ -1,8 +1,9 @@
 import React from "react"
 import Image from "next/image"
 
-import BackgroundImg from "@assets/sections/hero/background_01.jpg"
+import Link from "@components/link"
 
+import BackgroundImg from "@assets/sections/hero/background_01.jpg"
 import MiniLogoDark from "@assets/illustrations/logo_mini_dark.svg"
 
 const Hero = () => {
@@ -44,23 +45,24 @@ const Hero = () => {
             </span>
           </h2>
           <p className="pr-5 mb-5 text-base text-white lg:text-gray-700 md:text-lg">
-            Solving all your digital printing, singage and engraving needs in
+            Solving all your digital printing, signage and engraving needs in
             one shop with expert technicians.
           </p>
           <div className="flex items-center">
-            <a
-              href="/"
+            <Link
+              to="/#contact-us"
+              aria-label="Contact Us"
               className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 bg-red-600 rounded-full hover:bg-opacity-90 focus:shadow-outline focus:outline-none"
             >
               Contact Us
-            </a>
-            <a
-              href="/"
-              aria-label=""
+            </Link>
+            <Link
+              to="/#services"
+              aria-label="Services"
               className="inline-flex items-center font-semibold text-white transition-colors duration-200 lg:text-gray-800 hover:text-red-600"
             >
               Services
-            </a>
+            </Link>
           </div>
         </div>
 
