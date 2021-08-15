@@ -12,7 +12,16 @@ const _app: React.FC<AppProps> = ({ Component, pageProps }) => {
 
   return (
     <>
-      <NextSeo titleTemplate="Printteq | %s" title="We Print It All" />
+      <NextSeo
+        titleTemplate="Printteq | %s"
+        title="We Print It All"
+        additionalLinkTags={[
+          {
+            rel: "icon",
+            href: "/favicon.ico",
+          },
+        ]}
+      />
 
       <Layout>
         <Component {...pageProps} />
