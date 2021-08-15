@@ -1,3 +1,5 @@
+import React from "react"
+import { NextSeo } from "next-seo"
 import type { AppProps } from "next/app"
 
 import { useNormalScrollRoutes } from "@hooks/useNormalScrollRoutes"
@@ -9,9 +11,13 @@ const _app: React.FC<AppProps> = ({ Component, pageProps }) => {
   useNormalScrollRoutes()
 
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <NextSeo titleTemplate="Printteq | %s" title="We Print It All" />
+
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
   )
 }
 
