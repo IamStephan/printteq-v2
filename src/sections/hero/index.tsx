@@ -66,7 +66,7 @@ const Hero = () => {
 
         <div className="absolute items-center justify-center hidden transform -translate-y-1/2 right-4 lg:right-8 top-1/2 lg:flex lg:flex-col">
           <MiniLogoDark className="w-auto h-40 mb-8 text-red-600" />
-          <h1 className="mb-8 text-4xl font-bold text-center text-white uppercase text-opacity-80">
+          <h1 className="mb-8 text-4xl font-bold text-center text-white uppercase">
             We print it all
           </h1>
         </div>
