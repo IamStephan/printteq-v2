@@ -16,8 +16,8 @@ const Footer = () => {
             className="inline-flex items-center"
           >
             <LogoMini className="w-auto text-red-600 h-7" />
-            <span className="ml-2 text-xl font-bold tracking-wide text-gray-900 uppercase">
-              Printteq
+            <span className="ml-2 text-xl font-bold tracking-wide text-gray-900">
+              PRiNTTEQ
             </span>
           </Link>
         </div>
