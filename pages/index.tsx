@@ -15,7 +15,7 @@ const Home: React.FC = () => {
       <SocialProof />
       <Benefits />
       <Services />
-      <Team />
+      {/* <Team /> */}
       <ShowcaseGallery />
       <CTA />
     </>
