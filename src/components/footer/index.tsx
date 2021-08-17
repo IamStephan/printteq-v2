@@ -7,7 +7,7 @@ import LogoMini from "@assets/illustrations/logo_mini.svg"
 const Footer = () => {
   return (
     <footer className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-      <section className="flex flex-col mb-4 space-y-2 sm:flex-row sm:space-y-0 sm:justify-between">
+      <section className="flex flex-row items-center justify-between mb-4">
         <div className="">
           <Link
             to="/"
