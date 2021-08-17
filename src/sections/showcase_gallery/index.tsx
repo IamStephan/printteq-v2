@@ -1,4 +1,5 @@
 import React from "react"
+import { useEmblaCarousel } from "embla-carousel/react"
 import Img from "next/image"
 
 import Showcase01 from "@assets/sections/gallery/showcase_01.jpg"
@@ -8,15 +9,47 @@ import Showcase04 from "@assets/sections/gallery/showcase_04.jpg"
 import Showcase05 from "@assets/sections/gallery/showcase_05.jpg"
 import Showcase06 from "@assets/sections/gallery/showcase_06.jpg"
 
+const slides = [
+  {
+    imgSrc: Showcase01,
+    alt: "",
+  },
+  {
+    imgSrc: Showcase02,
+    alt: "",
+  },
+  {
+    imgSrc: Showcase03,
+    alt: "",
+  },
+  {
+    imgSrc: Showcase04,
+    alt: "",
+  },
+  {
+    imgSrc: Showcase05,
+    alt: "",
+  },
+  {
+    imgSrc: Showcase06,
+    alt: "",
+  },
+]
+
 const Gallery = () => {
+  const [emblaRef] = useEmblaCarousel({
+    align: "start",
+    containScroll: "trimSnaps",
+  })
+
   return (
     <section
       id="gallery-showcase"
       className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
     >
-      <div className="flex flex-col w-full mb-6 lg:justify-between lg:flex-row md:mb-8">
-        <div className="flex items-center mb-5 md:mb-6 group lg:max-w-xl">
-          <a href="/" aria-label="Item" className="mr-3">
+      <div className="grid grid-rows-2 gap-6 lg:grid-rows-1 lg:grid-cols-4">
+        <div className="flex flex-col sm:items-center md:items-start">
+          <a href="/" aria-label="Item" className="block mb-4">
             <div className="flex items-center justify-center w-16 h-16 rounded-full bg-red-50">
               <svg
                 className="w-10 h-10 text-red-600"
@@ -35,82 +68,41 @@ const Gallery = () => {
               </svg>
             </div>
           </a>
-          <h2 className="font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="mb-4 font-sans text-xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl">
             <span className="inline-block mb-2">Our Showroom</span>
-            <div className="h-1 ml-auto duration-300 origin-left transform bg-red-600 scale-x-30 group-hover:scale-x-100" />
+            <div className="h-1 ml-auto duration-300 origin-left transform bg-red-600 scale-x-30" />
           </h2>
-        </div>
-        <p className="w-full text-gray-700 lg:text-sm lg:max-w-md">
-          Sed ut perspiciatis unde omnis iste natus error sit iste voluptatem
-          accusantium doloremque rem aperiam, ipsa eaque quae. Sed ut
-          perspiciatis unde omnis iste.
-        </p>
-      </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-[repeat(4,auto)] md:grid-rows-[repeat(3,auto)] gap-6">
-        <div className="relative overflow-hidden rounded-md aspect-w-1 aspect-h-1">
-          <Img
-            src={Showcase01}
-            quality="100"
-            placeholder="blur"
-            layout="fill"
-            objectFit="cover"
-            className="absolute inset-0 object-cover w-full h-full"
-            alt=""
-          />
-        </div>
-        <div className="relative overflow-hidden rounded-md aspect-w-1 aspect-h-1">
-          <Img
-            src={Showcase02}
-            quality="100"
-            placeholder="blur"
-            layout="fill"
-            objectFit="cover"
-            className="absolute inset-0 object-cover w-full h-full"
-            alt=""
-          />
+          <p className="w-full text-gray-700 sm:text-center md:text-left lg:text-sm lg:max-w-md">
+            Just some of the work we've done for our clients. You can let us
+            know if you'd like us to showcase your work.
+          </p>
         </div>
 
-        <div className="relative col-span-2 overflow-hidden rounded-md aspect-w-3 aspect-h-2 sm:aspect-w-1 sm:aspect-h-1 sm:col-span-1 md:col-span-2 md:row-span-2 md:aspect-w-4 md:aspect-h-3">
-          <Img
-            src={Showcase04}
-            quality="100"
-            placeholder="blur"
-            layout="fill"
-            objectFit="cover"
-            className="absolute inset-0 object-cover w-full h-full"
-            alt=""
-          />
-        </div>
-        <div className="relative col-span-2 overflow-hidden rounded-md aspect-w-3 aspect-h-2 sm:aspect-w-1 sm:aspect-h-1 sm:col-span-1 md:col-span-2 md:row-span-2 md:aspect-w-4 md:aspect-h-3">
-          <Img
-            src={Showcase03}
-            quality="100"
-            placeholder="blur"
-            layout="fill"
-            objectFit="cover"
-            className="absolute inset-0 object-cover w-full h-full"
-            alt=""
-          />
-        </div>
-        <div className="relative overflow-hidden rounded-md aspect-w-1 aspect-h-1">
-          <Img
-            src={Showcase05}
-            placeholder="blur"
-            layout="fill"
-            objectFit="cover"
-            className="absolute inset-0 object-cover w-full h-full"
-            alt=""
-          />
-        </div>
-        <div className="relative overflow-hidden rounded-md aspect-w-1 aspect-h-1">
-          <Img
-            src={Showcase06}
-            placeholder="blur"
-            layout="fill"
-            objectFit="cover"
-            className="absolute inset-0 object-cover w-full h-full"
-            alt=""
-          />
+        <div
+          className="relative w-full h-full py-px overflow-hidden lg:col-span-3"
+          ref={emblaRef}
+        >
+          <div className="grid h-full grid-flow-col auto-cols-[75%] sm:auto-cols-[50%] md:auto-cols-[25%] gap-x-6">
+            {slides.map((item, i) => (
+              <div
+                key={i}
+                className="relative h-full overflow-hidden rounded-md ring-1 ring-gray-900 ring-opacity-20"
+              >
+                <Img
+                  src={item.imgSrc}
+                  placeholder="blur"
+                  layout="fill"
+                  objectFit="cover"
+                  className="absolute inset-0 object-cover w-full h-full"
+                  alt={item.alt}
+                />
+
+                <div className="absolute inset-0">
+                  <div className="absolute inset-x-0 bottom-0 h-4/5 bg-gradient-to-t from-gray-900 bg-opacity-90" />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
