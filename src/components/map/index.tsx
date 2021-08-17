@@ -12,6 +12,7 @@ const Map = () => {
     <MapContainer
       center={Position}
       zoom={15.5}
+      scrollWheelZoom={false}
       className="absolute inset-0 w-full h-full bg-gray-900 border-none"
     >
       <TileLayer
