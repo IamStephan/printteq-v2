@@ -56,10 +56,20 @@ const CTA = () => {
               </div>
               <ul>
                 <li>
-                  <a className="text-sm text-gray-900">info@printteq.co.za</a>
+                  <a
+                    className="text-sm text-gray-900"
+                    href="mailto:info@printteq.co.za"
+                  >
+                    info@printteq.co.za
+                  </a>
                 </li>
                 <li>
-                  <a className="text-sm text-gray-900">orders@printteq.co.za</a>
+                  <a
+                    className="text-sm text-gray-900"
+                    href="mailto:orders@printteq.co.za"
+                  >
+                    orders@printteq.co.za
+                  </a>
                 </li>
               </ul>
             </div>
@@ -87,10 +97,14 @@ const CTA = () => {
               </div>
               <ul>
                 <li>
-                  <a className="text-sm text-gray-900">022 065 0067</a>
+                  <a className="text-sm text-gray-900" href="tel:0220650607">
+                    022 065 0067
+                  </a>
                 </li>
                 <li>
-                  <a className="text-sm text-gray-900">082 079 4173</a>
+                  <a className="text-sm text-gray-900" href="tel:0820794173">
+                    082 079 4173
+                  </a>
                 </li>
               </ul>
             </div>
@@ -114,14 +128,14 @@ const CTA = () => {
                   />
                 </svg>
               </div>
-              <ul>
-                <li className="text-sm text-gray-900">
+              <address>
+                <p className="text-sm text-gray-900">
                   Unit 7, 844@Oostewal Centre
-                </li>
-                <li className="text-sm text-gray-900">
+                </p>
+                <p className="text-sm text-gray-900">
                   Oostewal Road, Langebaan
-                </li>
-              </ul>
+                </p>
+              </address>
             </div>
           </div>
         </div>
