@@ -14,7 +14,7 @@ const Hero = () => {
           viewBox="0 0 365 894"
           fill="none"
           preserveAspectRatio="none slice"
-          className="absolute left-0 z-10 hidden h-full text-white transform inset-y-1 lg:block"
+          className="absolute left-0 z-10 hidden h-[calc(100%+1px)] text-white transform lg:block"
         >
           <path
             d="M199.889 508.341C199.652 411.524 199.413 313.997 167.857 222.32C138.07 135.867 82.5417 57.422 -4.57764e-05 3.05176e-05L0 894H365C189 872.5 205.934 714.406 201.468 609.199C200.054 575.852 199.971 542.14 199.889 508.341Z"
