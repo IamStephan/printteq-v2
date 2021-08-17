@@ -38,10 +38,9 @@ const Services = () => {
             <div className="h-1 ml-auto duration-300 origin-left transform bg-red-600 rounded-full scale-x-30 group-hover:scale-x-100" />
           </h2>
         </div>
-        <p className="w-full text-gray-700 lg:text-sm lg:max-w-md">
-          "Sed ut perspiciatis unde omnis iste natus error sit iste voluptatem
-          accusantium doloremque rem aperiam, ipsa eaque quae. Sed ut
-          perspiciatis unde omnis iste."
+        <p className="w-full text-gray-700 lg:text-base lg:max-w-md">
+          We offer a wide selection of services you can use to solidify your
+          brand identity or simply to impress a loved one.
         </p>
       </div>
       <div className="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
@@ -53,7 +52,7 @@ const Services = () => {
             className="absolute inset-0 object-cover w-full h-full"
             alt=""
           />
-          <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-gray-900 bg-opacity-90 backdrop-filter backdrop-blur-md">
+          <div className="absolute inset-x-0 bottom-0 flex items-end justify-center px-6 py-4 h-4/5 bg-gradient-to-t from-gray-900 bg-opacity-90">
             <h3 className="text-xl font-black tracking-wide text-center text-white">
               Signage
             </h3>
@@ -71,7 +70,7 @@ const Services = () => {
             />
           </div>
 
-          <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-gray-900 bg-opacity-90">
+          <div className="absolute inset-x-0 bottom-0 flex items-end justify-center px-6 py-4 h-4/5 bg-gradient-to-t from-gray-900 bg-opacity-90">
             <h3 className="text-xl font-black tracking-wide text-center text-white">
               Engraving
             </h3>
@@ -89,7 +88,7 @@ const Services = () => {
             />
           </div>
 
-          <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-gray-900 bg-opacity-90">
+          <div className="absolute inset-x-0 bottom-0 flex items-end justify-center px-6 py-4 h-4/5 bg-gradient-to-t from-gray-900 bg-opacity-90">
             <h3 className="text-xl font-black tracking-wide text-center text-white">
               Vinyl
             </h3>
@@ -107,7 +106,7 @@ const Services = () => {
             />
           </div>
 
-          <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-gray-900 bg-opacity-90">
+          <div className="absolute inset-x-0 bottom-0 flex items-end justify-center px-6 py-4 h-4/5 bg-gradient-to-t from-gray-900 bg-opacity-90">
             <h3 className="text-xl font-black tracking-wide text-center text-white">
               Printing
             </h3>
@@ -126,7 +125,7 @@ const Services = () => {
             />
           </div>
 
-          <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-gray-900 bg-opacity-90">
+          <div className="absolute inset-x-0 bottom-0 flex items-end justify-center px-6 py-4 h-4/5 bg-gradient-to-t from-gray-900 bg-opacity-90">
             <h3 className="text-xl font-black tracking-wide text-center text-white">
               Doming
             </h3>
@@ -144,7 +143,7 @@ const Services = () => {
             />
           </div>
 
-          <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-gray-900 bg-opacity-90">
+          <div className="absolute inset-x-0 bottom-0 flex items-end justify-center px-6 py-4 h-4/5 bg-gradient-to-t from-gray-900 bg-opacity-90">
             <h3 className="text-xl font-black tracking-wide text-center text-white">
               Banners / Gazebos
             </h3>
@@ -162,7 +161,7 @@ const Services = () => {
             />
           </div>
 
-          <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-gray-900 bg-opacity-90">
+          <div className="absolute inset-x-0 bottom-0 flex items-end justify-center px-6 py-4 h-4/5 bg-gradient-to-t from-gray-900 bg-opacity-90">
             <h3 className="text-xl font-black tracking-wide text-center text-white">
               Order Books
             </h3>
@@ -180,7 +179,7 @@ const Services = () => {
             />
           </div>
 
-          <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-gray-900 bg-opacity-90">
+          <div className="absolute inset-x-0 bottom-0 flex items-end justify-center px-6 py-4 h-4/5 bg-gradient-to-t from-gray-900 bg-opacity-90">
             <h3 className="text-xl font-black tracking-wide text-center text-white">
               Stamps
             </h3>
