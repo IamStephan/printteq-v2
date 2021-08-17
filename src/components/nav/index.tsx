@@ -17,10 +17,10 @@ const Links = [
     title: "Services",
     url: "/#services",
   },
-  {
-    title: "Team",
-    url: "/#team",
-  },
+  // {
+  //   title: "Team",
+  //   url: "/#team",
+  // },
   {
     title: "Showcase",
     url: "/#gallery-showcase",
