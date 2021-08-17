@@ -28,7 +28,7 @@ const Hero = () => {
           layout="fill"
           objectPosition="bottom"
           className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
-          alt=""
+          alt="Lase printing | We print it all."
         />
         <div className="absolute inset-0 bg-gray-900 bg-opacity-80 backdrop-filter backdrop-blur-sm" />
       </div>
@@ -67,7 +67,10 @@ const Hero = () => {
         </div>
 
         <div className="absolute items-center justify-center hidden transform -translate-y-1/2 right-4 lg:right-8 top-1/2 lg:flex lg:flex-col">
-          <MiniLogoDark className="w-auto h-40 mb-8 text-red-600" />
+          <MiniLogoDark
+            aria-label="We Print it all"
+            className="w-auto h-40 mb-8 text-red-600"
+          />
           <h1 className="mb-8 text-4xl font-bold text-center text-white uppercase">
             We print it all
           </h1>

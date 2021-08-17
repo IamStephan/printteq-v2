@@ -12,27 +12,27 @@ import Showcase06 from "@assets/sections/gallery/showcase_06.jpg"
 const slides = [
   {
     imgSrc: Showcase01,
-    alt: "",
+    alt: "Printing Fooderia vinyl.",
   },
   {
     imgSrc: Showcase02,
-    alt: "",
+    alt: "Printteq laser printing example.",
   },
   {
     imgSrc: Showcase03,
-    alt: "",
+    alt: "We print it all vinyl.",
   },
   {
     imgSrc: Showcase04,
-    alt: "",
+    alt: "Demo print of the forest.",
   },
   {
     imgSrc: Showcase05,
-    alt: "",
+    alt: "Emblem engraving.",
   },
   {
     imgSrc: Showcase06,
-    alt: "",
+    alt: "Team meeting.",
   },
 ]
 

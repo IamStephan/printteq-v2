@@ -50,7 +50,7 @@ const Services = () => {
             placeholder="blur"
             layout="fill"
             className="absolute inset-0 object-cover w-full h-full"
-            alt=""
+            alt="Signage"
           />
           <div className="absolute inset-x-0 bottom-0 flex items-end justify-center px-6 py-4 h-4/5 bg-gradient-to-t from-gray-900 bg-opacity-90">
             <h3 className="text-xl font-black tracking-wide text-center text-white">
@@ -66,7 +66,7 @@ const Services = () => {
               placeholder="blur"
               layout="fill"
               className="absolute inset-0 object-cover w-full h-full"
-              alt=""
+              alt="Engravings"
             />
           </div>
 
@@ -84,7 +84,7 @@ const Services = () => {
               placeholder="blur"
               layout="fill"
               className="absolute inset-0 object-cover w-full h-full"
-              alt=""
+              alt="Vinyl"
             />
           </div>
 
@@ -102,7 +102,7 @@ const Services = () => {
               placeholder="blur"
               layout="fill"
               className="absolute inset-0 object-cover w-full h-full"
-              alt=""
+              alt="Printing"
             />
           </div>
 
@@ -115,13 +115,12 @@ const Services = () => {
 
         <div className="relative overflow-hidden transition duration-200 transform rounded-md shadow-lg hover:-translate-y-2 hover:shadow-2xl">
           <div className="object-cover w-full h-56 md:h-64 xl:h-80">
-            {" "}
             <Image
               src={DomingImg}
               placeholder="blur"
               layout="fill"
               className="absolute inset-0 object-cover w-full h-full"
-              alt=""
+              alt="Doming"
             />
           </div>
 
@@ -139,7 +138,7 @@ const Services = () => {
               placeholder="blur"
               layout="fill"
               className="absolute inset-0 object-cover w-full h-full"
-              alt=""
+              alt="Banners & Gazebos"
             />
           </div>
 
@@ -157,7 +156,7 @@ const Services = () => {
               placeholder="blur"
               layout="fill"
               className="absolute inset-0 object-cover w-full h-full"
-              alt=""
+              alt="Order books"
             />
           </div>
 
@@ -175,7 +174,7 @@ const Services = () => {
               placeholder="blur"
               layout="fill"
               className="absolute inset-0 object-cover w-full h-full"
-              alt=""
+              alt="Stamps"
             />
           </div>
 
