@@ -16,7 +16,7 @@ const Home: React.FC = () => {
         type="Store"
         id="https://printteq.co.za"
         name="Printteq | We Print It All"
-        description="Digital Printing, Signage & Engraving Solutions."
+        description="Digital Printing, Signage and Engraving Solutions."
         telephone="022 065 0067"
         address={{
           streetAddress: "Unit 7, 844@Oostewal Centre, Oostewal Road",
