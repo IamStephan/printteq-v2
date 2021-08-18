@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useEmblaCarousel } from "embla-carousel/react"
 import Img from "next/image"
 
@@ -37,10 +37,23 @@ const slides = [
 ]
 
 const Gallery = () => {
-  const [emblaRef] = useEmblaCarousel({
+  const [emblaRef, embla] = useEmblaCarousel({
     align: "start",
     containScroll: "trimSnaps",
   })
+
+  useEffect(() => {
+    if (!embla) return
+
+    /**
+     * NOTE:
+     * ======
+     * When the page fisrt loads the slider is not
+     * properly initiated so I'm just redoing it to make
+     * sure the slides work as expected
+     */
+    embla.reInit()
+  }, [embla])
 
   return (
     <section
