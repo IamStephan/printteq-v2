@@ -14,16 +14,19 @@
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/line-clamp": "^0.2.1",
     "@tailwindcss/typography": "^0.4.1",
+    "axios": "^0.21.1",
     "clsx": "^1.1.1",
     "embla-carousel": "^4.5.3",
     "leaflet": "^1.7.1",
     "next": "11.0.1",
     "next-seo": "^4.26.0",
     "node-match-path": "^0.6.3",
+    "plaiceholder": "^2.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-flip-toolkit": "^7.0.13",
-    "react-leaflet": "^3.2.1"
+    "react-leaflet": "^3.2.1",
+    "sharp": "^0.29.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^5.5.0",
