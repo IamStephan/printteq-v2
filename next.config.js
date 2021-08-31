@@ -4,7 +4,7 @@ const { withPlaiceholder } = require("@plaiceholder/next")
 module.exports = withPlaiceholder({
   reactStrictMode: true,
   images: {
-    domains: ["scontent.cdninstagram.com", "video.cdninstagram.com"],
+    domains: ["scontent.cdninstagram.com"],
   },
   webpack(config) {
     config.module.rules.push({
