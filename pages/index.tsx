@@ -50,7 +50,7 @@ const Home: React.FC<Props> = ({ images }) => {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   // If this fails on subsequent generations, it should just keep the old images
 
   const { images } = await GetShowcaseImages({})
@@ -59,8 +59,6 @@ export async function getStaticProps() {
     props: {
       images,
     },
-    // Every Hour
-    revalidate: 3600,
   }
 }
 
