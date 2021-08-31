@@ -2,41 +2,47 @@ import React, { useEffect } from "react"
 import { useEmblaCarousel } from "embla-carousel/react"
 import Img from "next/image"
 
-import Showcase01 from "@assets/sections/gallery/showcase_01.jpg"
-import Showcase02 from "@assets/sections/gallery/showcase_02.jpg"
-import Showcase03 from "@assets/sections/gallery/showcase_03.jpg"
-import Showcase04 from "@assets/sections/gallery/showcase_04.jpg"
-import Showcase05 from "@assets/sections/gallery/showcase_05.jpg"
-import Showcase06 from "@assets/sections/gallery/showcase_06.jpg"
+// import Showcase01 from "@assets/sections/gallery/showcase_01.jpg"
+// import Showcase02 from "@assets/sections/gallery/showcase_02.jpg"
+// import Showcase03 from "@assets/sections/gallery/showcase_03.jpg"
+// import Showcase04 from "@assets/sections/gallery/showcase_04.jpg"
+// import Showcase05 from "@assets/sections/gallery/showcase_05.jpg"
+// import Showcase06 from "@assets/sections/gallery/showcase_06.jpg"
 
-const slides = [
-  {
-    imgSrc: Showcase01,
-    alt: "Printing Fooderia vinyl.",
-  },
-  {
-    imgSrc: Showcase02,
-    alt: "Printteq laser printing example.",
-  },
-  {
-    imgSrc: Showcase03,
-    alt: "We print it all vinyl.",
-  },
-  {
-    imgSrc: Showcase04,
-    alt: "Demo print of the forest.",
-  },
-  {
-    imgSrc: Showcase05,
-    alt: "Emblem engraving.",
-  },
-  {
-    imgSrc: Showcase06,
-    alt: "Team meeting.",
-  },
-]
+import { RemoteImageData } from "@__types__/remote_image"
 
-const Gallery = () => {
+interface Props {
+  images: Array<RemoteImageData>
+}
+
+// const FallbackImages: Array<RemoteImageData> = [
+//   {
+//     src: Showcase01,
+//     alt: "Printing Fooderia vinyl.",
+//   },
+//   {
+//     src: Showcase02,
+//     alt: "Printteq laser printing example.",
+//   },
+//   {
+//     src: Showcase03,
+//     alt: "We print it all vinyl.",
+//   },
+//   {
+//     src: Showcase04,
+//     alt: "Demo print of the forest.",
+//   },
+//   {
+//     src: Showcase05,
+//     alt: "Emblem engraving.",
+//   },
+//   {
+//     src: Showcase06,
+//     alt: "Team meeting.",
+//   },
+// ]
+
+const Gallery: React.FC<Props> = ({ images }) => {
   const [emblaRef, embla] = useEmblaCarousel({
     align: "start",
     containScroll: "trimSnaps",
@@ -96,14 +102,15 @@ const Gallery = () => {
           ref={emblaRef}
         >
           <div className="grid h-full grid-flow-col auto-cols-[75%] sm:auto-cols-[50%] md:auto-cols-[25%] gap-x-6">
-            {slides.map((item, i) => (
+            {images.map((item, i) => (
               <div
                 key={i}
                 className="relative h-full overflow-hidden rounded-md ring-1 ring-gray-900 ring-opacity-20"
               >
                 <Img
-                  src={item.imgSrc}
+                  src={item.src}
                   placeholder="blur"
+                  blurDataURL={item.blurData}
                   layout="fill"
                   objectFit="cover"
                   className="absolute inset-0 object-cover w-full h-full"
