@@ -28,7 +28,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   const params: InstaParams = {
     fields: "caption,media_url,media_type,timestamp,thumbnail_url",
-    limit: 15,
+    limit: 9,
     access_token: process.env["INSTA_ACCESS_TOKEN"] as string,
   }
 
