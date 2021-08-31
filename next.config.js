@@ -1,7 +1,7 @@
 // Hack to get next to build with placholder images
-require("sharp")
+const { withPlaiceholder } = require("@plaiceholder/next")
 
-module.exports = {
+module.exports = withPlaiceholder({
   reactStrictMode: true,
   images: {
     domains: ["scontent.cdninstagram.com", "video.cdninstagram.com"],
@@ -14,4 +14,4 @@ module.exports = {
 
     return config
   },
-}
+})
