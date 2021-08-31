@@ -105,7 +105,7 @@ const Gallery: React.FC<Props> = ({ images }) => {
             {images.map((item, i) => (
               <div
                 key={i}
-                className="relative h-full overflow-hidden rounded-md ring-1 ring-gray-900 ring-opacity-20"
+                className="relative h-full overflow-hidden rounded-md select-none ring-1 ring-gray-900 ring-opacity-20"
               >
                 <Img
                   src={item.src}
