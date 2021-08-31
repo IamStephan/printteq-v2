@@ -50,7 +50,7 @@ const Home: React.FC<Props> = ({ images }) => {
 }
 
 export async function getStaticProps() {
-  const { data } = await axios.get("http://localhost:3000/api/showcase_images")
+  const { data } = await axios.get(`${process.env["HOST"]}/api/showcase_images`)
 
   let images: Array<RemoteImageData> = data.images
 
