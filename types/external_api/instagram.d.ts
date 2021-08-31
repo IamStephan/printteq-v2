@@ -1,6 +1,6 @@
 export interface InstaData {
   id: string
-  caption: string
+  caption?: string
   media_url: string
   timestamp: string
 }
