@@ -1,3 +1,6 @@
+// Hack to get next to build with placholder images
+require("sharp")
+
 module.exports = {
   reactStrictMode: true,
   images: {
