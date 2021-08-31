@@ -1,6 +1,5 @@
 import React from "react"
 import { LocalBusinessJsonLd } from "next-seo"
-import axios from "axios"
 
 import Hero from "@sections/hero"
 import SocialProof from "@sections/social_proof"
@@ -9,6 +8,8 @@ import Services from "@sections/services"
 import Team from "@sections/team"
 import ShowcaseGallery from "@sections/showcase_gallery"
 import CTA from "@sections/cta"
+
+import GetShowcaseImages from "@utils/get_showcase_images"
 
 import { RemoteImageData } from "@__types__/remote_image"
 
@@ -50,9 +51,9 @@ const Home: React.FC<Props> = ({ images }) => {
 }
 
 export async function getStaticProps() {
-  const { data } = await axios.get(`${process.env["HOST"]}/api/showcase_images`)
+  // If this fails on subsequent generations, it should just keep the old images
 
-  let images: Array<RemoteImageData> = data.images
+  const { images } = await GetShowcaseImages({})
 
   return {
     props: {
