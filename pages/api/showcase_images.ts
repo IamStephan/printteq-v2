@@ -58,7 +58,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       id: item.id,
       src: img.src,
       blurData: base64,
-      alt: item.caption,
+      alt: item?.caption || "",
     })
   }
 
