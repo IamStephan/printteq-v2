@@ -1,5 +1,6 @@
 import React from "react"
 import { LocalBusinessJsonLd } from "next-seo"
+import axios from "axios"
 
 import Hero from "@sections/hero"
 import SocialProof from "@sections/social_proof"
@@ -9,7 +10,13 @@ import Team from "@sections/team"
 import ShowcaseGallery from "@sections/showcase_gallery"
 import CTA from "@sections/cta"
 
-const Home: React.FC = () => {
+import { RemoteImageData } from "@__types__/remote_image"
+
+interface Props {
+  images: Array<RemoteImageData>
+}
+
+const Home: React.FC<Props> = ({ images }) => {
   return (
     <>
       <LocalBusinessJsonLd
@@ -36,10 +43,24 @@ const Home: React.FC = () => {
       <Benefits />
       <Services />
       {/* <Team /> */}
-      <ShowcaseGallery />
+      <ShowcaseGallery images={images} />
       <CTA />
     </>
   )
+}
+
+export async function getStaticProps() {
+  const { data } = await axios.get("http://localhost:3000/api/showcase_images")
+
+  let images: Array<RemoteImageData> = data.images
+
+  return {
+    props: {
+      images,
+    },
+    // Every Hour
+    revalidate: 3600,
+  }
 }
 
 export default Home
