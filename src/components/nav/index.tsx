@@ -13,6 +13,19 @@ export enum NavModes {
   SPLIT_L = "SPLIT_L",
 }
 
+/**
+ * @description The padding or margin required to compansate
+ * for the layout being an overlay
+ *
+ * @summary Tailwind requires these values not to be static
+ * and since the navbar component is on every page rather declare
+ * them here and use them from other section
+ */
+export enum NavOverlayHeights {
+  padding = "pt-[calc(77px+64px)] lg:pt-[88px]",
+  margin = "mt-[calc(77px+64px)] lg:mt-[88px]",
+}
+
 export interface Props {
   /**
    * @description Toggles whether the navbar acts as an overlay or
@@ -71,13 +84,16 @@ const Navbar: React.FC<Props> = ({
             ) : mode === NavModes.LIGHT ? (
               <LogoMini className="w-auto text-red-600 h-7" />
             ) : (
-              <LogoMiniDark className="w-auto text-red-600 lg:hidden h-7" />
+              <LogoMiniDark className="w-auto text-red-600 h-7" />
             )}
             <span
               className={clsx(
                 "ml-2 text-xl font-bold tracking-wide text-gray-900",
                 {
                   "text-white lg:text-gray-900": mode === NavModes.SPLIT_L,
+                },
+                {
+                  "text-white": mode === NavModes.DARK,
                 }
               )}
             >
