@@ -1,5 +1,4 @@
 import React, { Fragment } from "react"
-import { useRouter } from "next/router"
 import { Popover, Transition } from "@headlessui/react"
 import clsx from "clsx"
 
@@ -7,6 +6,25 @@ import Link from "@components/link"
 
 import LogoMini from "@assets/illustrations/logo_mini.svg"
 import LogoMiniDark from "@assets/illustrations/logo_mini_dark.svg"
+
+export enum NavModes {
+  LIGHT = "LIGHT",
+  DARK = "DARK",
+  SPLIT_L = "SPLIT_L",
+}
+
+export interface Props {
+  /**
+   * @description Toggles whether the navbar acts as an overlay or
+   * apart of the DOM layout
+   */
+  isOverlay?: boolean
+
+  /**
+   * @description This dictates the color scheme of the navbar
+   */
+  mode?: NavModes
+}
 
 const Links = [
   {
@@ -27,15 +45,14 @@ const Links = [
   },
 ]
 
-const Navbar: React.FC = () => {
-  const { route } = useRouter()
-
-  const isHome = route === "/"
-
+const Navbar: React.FC<Props> = ({
+  isOverlay = false,
+  mode = NavModes.LIGHT,
+}) => {
   return (
     <nav
       className={clsx({
-        "absolute inset-x-0 top-0 z-10": isHome,
+        "absolute inset-x-0 top-0 z-10": isOverlay,
       })}
     >
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
@@ -46,19 +63,21 @@ const Navbar: React.FC = () => {
             title="Company"
             className="inline-flex items-center"
           >
-            {isHome ? (
+            {mode === NavModes.SPLIT_L ? (
               <>
                 <LogoMini className="hidden w-auto text-red-600 lg:block h-7" />
                 <LogoMiniDark className="w-auto text-red-600 lg:hidden h-7" />
               </>
-            ) : (
+            ) : mode === NavModes.LIGHT ? (
               <LogoMini className="w-auto text-red-600 h-7" />
+            ) : (
+              <LogoMiniDark className="w-auto text-red-600 lg:hidden h-7" />
             )}
             <span
               className={clsx(
                 "ml-2 text-xl font-bold tracking-wide text-gray-900",
                 {
-                  "text-white lg:text-gray-900": isHome,
+                  "text-white lg:text-gray-900": mode === NavModes.SPLIT_L,
                 }
               )}
             >
@@ -75,8 +94,10 @@ const Navbar: React.FC = () => {
                   className={clsx(
                     "font-medium tracking-wide transition-colors duration-200",
                     {
-                      "text-white hover:text-red-200": isHome,
-                      "text-gray-700 hover:text-red-600": !isHome,
+                      "text-white hover:text-red-200":
+                        mode === NavModes.DARK || mode === NavModes.SPLIT_L,
+                      "text-gray-700 hover:text-red-600":
+                        mode === NavModes.LIGHT,
                     }
                   )}
                 >
@@ -103,13 +124,14 @@ const Navbar: React.FC = () => {
                   "p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-red-50 focus:bg-red-50",
                   {
                     "hover:bg-red-600 hover:bg-opacity-10 focus:bg-red-600 focus:bg-opacity-75":
-                      isHome,
+                      mode === NavModes.DARK || mode === NavModes.SPLIT_L,
                   }
                 )}
               >
                 <svg
                   className={clsx("w-5 text-gray-600", {
-                    "text-white": isHome,
+                    "text-white":
+                      mode === NavModes.DARK || mode === NavModes.SPLIT_L,
                   })}
                   viewBox="0 0 24 24"
                 >
