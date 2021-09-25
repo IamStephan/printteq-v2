@@ -20,6 +20,7 @@
       "@hooks/*": ["./src/hooks/*"],
       "@sections/*": ["./src/sections/*"],
       "@templates/*": ["./src/templates/*"],
+      "@__t/*": ["./src/types/*"],
       "@utils/*": ["./src/utils/*"]
     }
   },
