@@ -1,12 +1,16 @@
 import React from "react"
 
-import Nav from "@components/nav"
+import Nav, { Props as NavProps } from "@components/nav"
 import Footer from "@components/footer"
 
-const Layout: React.FC = ({ children }) => {
+interface Props {
+  navProps: NavProps
+}
+
+const Layout: React.FC<Props> = ({ children, navProps }) => {
   return (
     <>
-      <Nav />
+      <Nav {...navProps} />
       <main>{children}</main>
       <Footer />
     </>

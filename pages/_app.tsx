@@ -6,9 +6,12 @@ import { useNormalScrollRoutes } from "@hooks/useNormalScrollRoutes"
 import Layout from "@templates/layout"
 
 import "../styles/globals.css"
+import { IPage } from "@__t/page"
 
 const _app: React.FC<AppProps> = ({ Component, pageProps }) => {
   useNormalScrollRoutes()
+
+  const { navProps = {} } = Component as IPage
 
   return (
     <>
@@ -23,7 +26,7 @@ const _app: React.FC<AppProps> = ({ Component, pageProps }) => {
         ]}
       />
 
-      <Layout>
+      <Layout navProps={navProps}>
         <Component {...pageProps} />
       </Layout>
     </>

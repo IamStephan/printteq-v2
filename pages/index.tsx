@@ -9,7 +9,10 @@ import Team from "@sections/team"
 import ShowcaseGallery from "@sections/showcase_gallery"
 import CTA from "@sections/cta"
 
-const Home: React.FC = () => {
+import type { IPage } from "@__t/page"
+import { NavModes } from "@components/nav"
+
+const Home: IPage = () => {
   return (
     <>
       <LocalBusinessJsonLd
@@ -40,6 +43,11 @@ const Home: React.FC = () => {
       <CTA />
     </>
   )
+}
+
+Home.navProps = {
+  isOverlay: true,
+  mode: NavModes.SPLIT_L,
 }
 
 export default Home
