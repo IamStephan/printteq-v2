@@ -2,13 +2,16 @@ import React from "react"
 import Image from "next/image"
 
 import Link from "@components/link"
+import { NavOverlayHeights } from "@components/nav"
 
 import BackgroundImg from "@assets/sections/hero/background_01.jpg"
 import MiniLogoDark from "@assets/illustrations/logo_mini_dark.svg"
 
 const Hero = () => {
   return (
-    <section className="relative flex flex-col-reverse pb-16 pt-[calc(77px+64px)] lg:pt-[88px] lg:flex-col lg:pb-0">
+    <section
+      className={`relative flex flex-col-reverse pb-16 ${NavOverlayHeights.padding} lg:flex-col lg:pb-0`}
+    >
       <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
         <svg
           viewBox="0 0 365 894"
