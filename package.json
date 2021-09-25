@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@directus/sdk": "^9.0.0-rc.94",
     "@headlessui/react": "^1.4.0",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/forms": "^0.3.3",
