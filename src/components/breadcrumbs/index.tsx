@@ -14,6 +14,7 @@ const Breadcrumbs: React.FC<Props> = ({ links, children }) => {
     <ol className="flex px-4 py-2 space-x-2 overflow-hidden rounded-md ring-1 ring-gray-900 ring-opacity-10 bg-gray-50">
       {links.map((item, i) => (
         <BreadcrumbItem
+          key={i}
           lastItem={i === links.length - 1}
           showSeparator={i < links.length - 1}
           url={item.url}
