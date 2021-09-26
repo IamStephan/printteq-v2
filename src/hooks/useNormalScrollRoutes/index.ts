@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { useRouter } from "next/router"
 
-const useNormalScrollRoutes = () => {
+export const useNormalScrollRoutes = () => {
   const router = useRouter()
 
   useEffect(() => {
@@ -13,5 +13,3 @@ const useNormalScrollRoutes = () => {
     })
   }, [])
 }
-
-export { useNormalScrollRoutes }
