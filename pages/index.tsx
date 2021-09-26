@@ -5,12 +5,12 @@ import Hero from "@sections/hero"
 import SocialProof from "@sections/social_proof"
 import Benefits from "@sections/benefits"
 import Services from "@sections/services"
-import Team from "@sections/team"
 import ShowcaseGallery from "@sections/showcase_gallery"
 import CTA from "@sections/cta"
 
 import type { IPage } from "@__t/page"
 import { NavModes } from "@components/nav"
+import { GetServerSideProps } from "next"
 
 const Home: IPage = () => {
   return (
@@ -38,12 +38,21 @@ const Home: IPage = () => {
       <SocialProof />
       <Benefits />
       <Services />
-      {/* <Team /> */}
       <ShowcaseGallery />
       <CTA />
     </>
   )
 }
+
+// export const getServerSideProps: GetServerSideProps = async (data) => {
+//   console.log(data)
+
+//   return {
+//     props: {
+//       content: "data.content",
+//     },
+//   }
+// }
 
 Home.navProps = {
   isOverlay: true,
