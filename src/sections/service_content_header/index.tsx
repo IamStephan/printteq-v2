@@ -13,7 +13,7 @@ import BackgroundImg from "@assets/sections/hero/background_01.jpg"
 
 interface Props {
   title: string
-  summary: string
+  summary?: string
   showcase: any
 }
 
@@ -30,15 +30,18 @@ const ServicesHeader: React.FC<Props> = ({ title, summary, showcase }) => {
 
   return (
     <div className={`relative bg-gray-900 ${NavOverlayHeights.padding}`}>
-      <Image
-        src={showcase.url}
-        placeholder="blur"
-        layout="fill"
-        blurDataURL={showcase.thumbnail}
-        objectPosition="bottom"
-        className="absolute inset-0 object-cover w-full h-full"
-        alt="Lase printing | We print it all."
-      />
+      {showcase?.thumbnail && (
+        <Image
+          src={showcase.url}
+          placeholder="blur"
+          layout="fill"
+          blurDataURL={showcase.thumbnail}
+          objectPosition="bottom"
+          className="absolute inset-0 object-cover w-full h-full"
+          alt="Lase printing | We print it all."
+        />
+      )}
+
       <div className="absolute inset-0 bg-gray-900 bg-opacity-90 backdrop-filter backdrop-blur-sm" />
       <div className="absolute inset-x-0 bottom-0">
         <svg
