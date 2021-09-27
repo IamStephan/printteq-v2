@@ -51,25 +51,28 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
         fields: ["*", "showcase.*"],
       })
 
-    const showcaseThumbnail = await ImageUrlToBase64(
-      `https://admin.printteq.co.za/assets/${
-        //@ts-ignore
-        service?.showcase.id as any
-      }?key=thumbnail`,
-      //@ts-ignore
-      service?.showcase.type as any
-    )
-
     console.log()
 
     data = service as IService
 
-    data.showcase = {
-      thumbnail: showcaseThumbnail,
-      url: `https://admin.printteq.co.za/assets/${
+    //@ts-ignore
+    if (service?.showcase?.id) {
+      const showcaseThumbnail = await ImageUrlToBase64(
+        `https://admin.printteq.co.za/assets/${
+          // @ts-ignore
+          service?.showcase.id as any
+        }?key=thumbnail`,
         //@ts-ignore
-        service?.showcase.id as any
-      }`,
+        service?.showcase.type as any
+      )
+
+      data.showcase = {
+        thumbnail: showcaseThumbnail,
+        url: `https://admin.printteq.co.za/assets/${
+          //@ts-ignore
+          service?.showcase.id as any
+        }`,
+      }
     }
   } catch (e) {
     console.log(e)
